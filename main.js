@@ -23,28 +23,28 @@
 
 
 class Trainer{
-	constructor(pokemon){
+	constructor(){
 		this.pokemon = [];
-		
-		};
-	getPokemonTrainer() {
-			this.pokemon.push();
+		}
+
+	addPokemon(newPokemon) {
+			this.pokemon.push(newPokemon);
 	}
 }
 
-let pokemonTrainer = new Trainer(); // class
+let batman = new Trainer(); // class
 
 class Pokemon{
-	constructor(hp, attack, defense, abilities1, abilities2, frontImage){
+	constructor(hp, attack, defense, abilities1, abilities2, frontImage, backImage){
 		this.hp = hp;
 		this.attack = attack;
 		this.defense = defense;
 		this.abilities1 = abilities1;
 		this.abilities2 = abilities2;
 		this.frontImage = frontImage;
+		this.backImage = backImage;
 	}
 }
-
 
 // SQUIRTLE
 
@@ -53,8 +53,8 @@ $.ajax({
 	url: squirtleUrl,
 	type : 'GET',
 	success: function(data) {
-		console.log(data);
-		console.log(squirtleUrl)
+		// console.log(data);
+		// console.log(squirtleUrl)
 		let name = data.species.name
 			hp = data.stats[5].base_stat
 			attack = data.stats[4].base_stat
@@ -64,17 +64,16 @@ $.ajax({
 			frontImage = data.sprites.front_default
 			backImage = data.sprites.back_default
 
-	let squirtle = new Pokemon(hp,attack,defense, abilities1, abilities2)
-	pokemonTrainer.getPokemon(squirtle);
-
-	console.log(squirtle)
+	let squirtle = new Pokemon(hp, attack ,defense, abilities1, abilities2)
+	batman.addPokemon(squirtle);
+	console.log(squirtle.hp, attack, defense, abilities1, abilities2)
 
 	},
 	error: function(err) {
 		console.log('error:' + err)
 	},
 	complete: function() {
-		console.log(pokemonTrainer.pokemon[0].hp)
+	// console.log(batman.pokemon[0].hp + attack + defense + abilities1 + abilities2)
 
 		$("#squirtleName").append(`<h3><p>${name}</p></h3>`),
 		$("#squirtleHP").append(`<h5><p>HP: ${hp}</p></h5>`),
@@ -86,11 +85,10 @@ $.ajax({
 	}
 });
 
-console.log(pokemonTrainer)
+// console.log(batman)
+// batman.pokemon[0]
 
-// pokemonTrainer.pokemon[0].hp
-
-// WARTORTLE
+// // WARTORTLE
 
 let wartortleUrl = 'https://pokeapi.co/api/v2/pokemon/8';
 $.ajax({
@@ -116,8 +114,9 @@ $.ajax({
 		$("#wartortlePhoto").append(`<img src = "${frontImage}">`),
 		$("#wartortlePhoto").append(`<img src = "${backImage}">`)
 	
-	let wartortle = new Pokemon(hp,attack,defense, abilities1, abilities2)
-	trainer.getPokemon(wartortle)
+	let wartortle = new Pokemon(hp, attack, defense, abilities1, abilities2)
+	batman.addPokemon(wartortle)
+	console.log(wartortle.hp, attack, defense, abilities1, abilities2)
 
 	},
 	error: function(err) {
@@ -151,8 +150,11 @@ $.ajax({
 		$("#blastoisePhoto").append(`<img src = "${frontImage}">`),
 		$("#blastoisePhoto").append(`<img src = "${backImage}">`)
 
-	let blastoise = new Pokemon(hp,attack,defense, abilities1, abilities2)
-	trainer.getPokemon(blastoise)
+	let blastoise = new Pokemon(hp, attack, defense, abilities1, abilities2)
+	// console.log(blastoise)
+	batman.addPokemon(blastoise)
+	// console.log(batman)
+	console.log(blastoise.hp, attack, defense, abilities1, abilities2)
 
 	},
 	error: function(err) {
