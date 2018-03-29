@@ -5,7 +5,6 @@ class Trainer {
 
     getPokemon(name) {
         // console.log(this.pokemon)
-
         let found = this.pokemon.find(function(element) {
             if (element.name == name) {
                 return true;
@@ -23,7 +22,6 @@ class Trainer {
         this.pokemon.push(newPokemon);
     }
 }
-
 
 let batman = new Trainer(); // class
 
@@ -58,23 +56,21 @@ $.ajax({
         frontImage = data.sprites.front_default
         backImage = data.sprites.back_default
 
-        //var pName = name.charAt(0).toUpperCase() + name.slice(1);
+        let Name = name.charAt(0).toUpperCase() + name.slice(1);
 
         $("#squirtleName").append(`<p>${name}</p>`),
-            $("#squirtleInnerName").append(`<p>${name}</p>`),
-            $("#squirtleInfo").append(`<p><p>HP: ${hp}</p><p>`),
-            $("#squirtleInfo").append(`<p>Attack: ${attack}</p>`),
-            $("#squirtleInfo").append(`<p>Defense: ${defense}</p>`),
-            $("#squirtleInfo").append(`<p>Abilities: ${abilities1}, ${abilities2}</p>`),
-            $("#squirtleFrontPhoto").append(`<img src = "${frontImage}">`),
-            $("#squirtleBackPhoto").append(`<img src = "${backImage}">`)
+        $("#squirtleInnerName").append(`<p>${name}</p>`),
+        $("#squirtleInfo").append(`<p><p>HP: ${hp}</p><p>`),
+        $("#squirtleInfo").append(`<p>Attack: ${attack}</p>`),
+        $("#squirtleInfo").append(`<p>Defense: ${defense}</p>`),
+        $("#squirtleInfo").append(`<p>Abilities: ${abilities1}, ${abilities2}</p>`),
+        $("#squirtleFrontPhoto").append(`<img src = "${frontImage}">`),
+        $("#squirtleBackPhoto").append(`<img src = "${backImage}">`)
 
         let squirtle = new Pokemon(name, hp, attack, defense, abilities1, abilities2)
 
-
         batman.addPokemon(squirtle);
         console.log(name, squirtle.hp, attack, defense, abilities1, abilities2)
-
     },
     error: function(err) {
         console.log('error:' + err)
@@ -82,14 +78,13 @@ $.ajax({
     complete: function() {
         // console.log(batman.pokemon[0].hp + attack + defense + abilities1 + abilities2)
 
-
     }
 });
 
 console.log(batman)
 batman.pokemon[0]
 
-// // WARTORTLE
+// WARTORTLE
 
 let wartortleUrl = 'https://pokeapi.co/api/v2/pokemon/8';
 $.ajax({
@@ -146,19 +141,19 @@ $.ajax({
         backImage = data.sprites.back_default
 
         $("#blastoiseName").append(`<p>${name}</p>`),
-            $("#blastoiseInnerName").append(`<p>${name}</p>`),
-            $("#blastoiseInfo").append(`<p><p>HP: ${hp}</p></p>`),
-            $("#blastoiseInfo").append(`<p>Attack: ${attack}</p>`),
-            $("#blastoiseInfo").append(`<p>Defense: ${defense}</p>`),
-            $("#blastoiseInfo").append(`<p>Abilities: ${abilities1}, ${abilities2}</p>`),
-            $("#blastoiseFrontPhoto").append(`<img src = "${frontImage}">`),
-            $("#blastoiseBackPhoto").append(`<img src = "${backImage}">`)
+        $("#blastoiseInnerName").append(`<p>${name}</p>`),
+        $("#blastoiseInfo").append(`<p><p>HP: ${hp}</p></p>`),
+        $("#blastoiseInfo").append(`<p>Attack: ${attack}</p>`),
+        $("#blastoiseInfo").append(`<p>Defense: ${defense}</p>`),
+        $("#blastoiseInfo").append(`<p>Abilities: ${abilities1}, ${abilities2}</p>`),
+        $("#blastoiseFrontPhoto").append(`<img src = "${frontImage}">`),
+        $("#blastoiseBackPhoto").append(`<img src = "${backImage}">`)
 
         let blastoise = new Pokemon(name, hp, attack, defense, abilities1, abilities2)
-        console.log(blastoise)
+        //console.log(blastoise)
         batman.addPokemon(blastoise)
-        console.log(batman)
-        console.log(blastoise.hp, attack, defense, abilities1, abilities2)
+        //console.log(batman)
+        //console.log(blastoise.hp, attack, defense, abilities1, abilities2)
 
     },
     error: function(err) {
@@ -166,21 +161,17 @@ $.ajax({
     }
 });
 
-
-//
+// PARALLEX
 
 $(document).ready(function() {
     $('.parallax').parallax();
 });
 
-
-
 // MODAL
 
-// $(document).ready(function(){
-//     $(function () {         
-//         $('.modal').modal();
-//         $('#modal1').modal('open');
-//         $('.trigger-modal').modal(3000);
-//     });
-// })(jQuery);
+$(document).ready(function(){
+    $(function () {         
+        $('.modal').modal();
+        $('#modal1').modal('open');
+    });
+ })(jQuery);
