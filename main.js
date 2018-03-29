@@ -1,16 +1,29 @@
-
-
-//
-
 class Trainer {
     constructor() {
         this.pokemon = [];
+    }
+
+    getPokemon(name) {
+        // console.log(this.pokemon)
+
+        let found = this.pokemon.find(function(element) {
+            if (element.name == name) {
+                return true;
+            }
+        });
+        // console.log(found)
+        return found;
+    }
+
+    allPokemon() {
+        return this.pokemon
     }
 
     addPokemon(newPokemon) {
         this.pokemon.push(newPokemon);
     }
 }
+
 
 let batman = new Trainer(); // class
 
@@ -28,7 +41,7 @@ class Pokemon {
 }
 
 // SQUIRTLE
-	
+
 let squirtleUrl = 'https://pokeapi.co/api/v2/pokemon/7/';
 $.ajax({
     url: squirtleUrl,
@@ -44,21 +57,21 @@ $.ajax({
         abilities2 = data.abilities[1].ability.name
         frontImage = data.sprites.front_default
         backImage = data.sprites.back_default
- 
- 		//var pName = name.charAt(0).toUpperCase() + name.slice(1);
+
+        //var pName = name.charAt(0).toUpperCase() + name.slice(1);
 
         $("#squirtleName").append(`<p>${name}</p>`),
-        $("#squirtleInnerName").append(`<p>${name}</p>`),
-        $("#squirtleInfo").append(`<p><p>HP: ${hp}</p><p>`),
-        $("#squirtleInfo").append(`<p>Attack: ${attack}</p>`),
-        $("#squirtleInfo").append(`<p>Defense: ${defense}</p>`),
-        $("#squirtleInfo").append(`<p>Abilities: ${abilities1}, ${abilities2}</p>`),
-        $("#squirtleFrontPhoto").append(`<img src = "${frontImage}">`),
-        $("#squirtleBackPhoto").append(`<img src = "${backImage}">`)
+            $("#squirtleInnerName").append(`<p>${name}</p>`),
+            $("#squirtleInfo").append(`<p><p>HP: ${hp}</p><p>`),
+            $("#squirtleInfo").append(`<p>Attack: ${attack}</p>`),
+            $("#squirtleInfo").append(`<p>Defense: ${defense}</p>`),
+            $("#squirtleInfo").append(`<p>Abilities: ${abilities1}, ${abilities2}</p>`),
+            $("#squirtleFrontPhoto").append(`<img src = "${frontImage}">`),
+            $("#squirtleBackPhoto").append(`<img src = "${backImage}">`)
 
         let squirtle = new Pokemon(name, hp, attack, defense, abilities1, abilities2)
 
-   		
+
         batman.addPokemon(squirtle);
         console.log(name, squirtle.hp, attack, defense, abilities1, abilities2)
 
@@ -67,7 +80,7 @@ $.ajax({
         console.log('error:' + err)
     },
     complete: function() {
-       // console.log(batman.pokemon[0].hp + attack + defense + abilities1 + abilities2)
+        // console.log(batman.pokemon[0].hp + attack + defense + abilities1 + abilities2)
 
 
     }
@@ -90,18 +103,19 @@ $.ajax({
         attack = data.stats[4].base_stat
         defense = data.stats[3].base_stat
         abilities1 = data.abilities[0].ability.name
+        // data.abilities.forEach(function(item){})
         abilities2 = data.abilities[1].ability.name
         frontImage = data.sprites.front_default
         backImage = data.sprites.back_default
 
         $("#wartortleName").append(`<p>${name}</p>`),
-        $("#wartortleInnerName").append(`<p>${name}</p>`),
-        $("#wartortleInfo").append(`<p><p>HP: ${hp}</p></p>`),
-        $("#wartortleInfo").append(`<p>Attack: ${attack}</p>`),
-        $("#wartortleInfo").append(`<p>Defense: ${defense}</p>`),
-        $("#wartortleInfo").append(`<p>Abilities: ${abilities1}, ${abilities2}</p>`),
-        $("#wartortleFrontPhoto").append(`<img src = "${frontImage}">`),
-        $("#wartortleBackPhoto").append(`<img src = "${backImage}">`)
+            $("#wartortleInnerName").append(`<p>${name}</p>`),
+            $("#wartortleInfo").append(`<p><p>HP: ${hp}</p></p>`),
+            $("#wartortleInfo").append(`<p>Attack: ${attack}</p>`),
+            $("#wartortleInfo").append(`<p>Defense: ${defense}</p>`),
+            $("#wartortleInfo").append(`<p>Abilities: ${abilities1}, ${abilities2}</p>`),
+            $("#wartortleFrontPhoto").append(`<img src = "${frontImage}">`),
+            $("#wartortleBackPhoto").append(`<img src = "${backImage}">`)
 
         let wartortle = new Pokemon(name, hp, attack, defense, abilities1, abilities2)
         batman.addPokemon(wartortle)
@@ -132,13 +146,13 @@ $.ajax({
         backImage = data.sprites.back_default
 
         $("#blastoiseName").append(`<p>${name}</p>`),
-        $("#blastoiseInnerName").append(`<p>${name}</p>`),
-        $("#blastoiseInfo").append(`<p><p>HP: ${hp}</p></p>`),
-        $("#blastoiseInfo").append(`<p>Attack: ${attack}</p>`),
-        $("#blastoiseInfo").append(`<p>Defense: ${defense}</p>`),
-        $("#blastoiseInfo").append(`<p>Abilities: ${abilities1}, ${abilities2}</p>`),
-        $("#blastoiseFrontPhoto").append(`<img src = "${frontImage}">`),
-        $("#blastoiseBackPhoto").append(`<img src = "${backImage}">`)
+            $("#blastoiseInnerName").append(`<p>${name}</p>`),
+            $("#blastoiseInfo").append(`<p><p>HP: ${hp}</p></p>`),
+            $("#blastoiseInfo").append(`<p>Attack: ${attack}</p>`),
+            $("#blastoiseInfo").append(`<p>Defense: ${defense}</p>`),
+            $("#blastoiseInfo").append(`<p>Abilities: ${abilities1}, ${abilities2}</p>`),
+            $("#blastoiseFrontPhoto").append(`<img src = "${frontImage}">`),
+            $("#blastoiseBackPhoto").append(`<img src = "${backImage}">`)
 
         let blastoise = new Pokemon(name, hp, attack, defense, abilities1, abilities2)
         console.log(blastoise)
@@ -153,13 +167,20 @@ $.ajax({
 });
 
 
-// // MODAL
+//
 
-$(document).ready(function(){
-    $(function () {         
-        $('.modal').modal();
-        $('#modal1').modal('open');
-        $('.trigger-modal').modal(3000);
-    });
-})(jQuery);
+$(document).ready(function() {
+    $('.parallax').parallax();
+});
 
+
+
+// MODAL
+
+// $(document).ready(function(){
+//     $(function () {         
+//         $('.modal').modal();
+//         $('#modal1').modal('open');
+//         $('.trigger-modal').modal(3000);
+//     });
+// })(jQuery);

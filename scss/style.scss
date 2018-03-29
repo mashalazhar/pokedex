@@ -1,7 +1,18 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+html{
+	height:100%;
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
+}
+
+.parallax-container {
+    height: 200px;
+}
+
+nav {
+    color: #fff;
+    background-color: red;
+    font-family: Calibri;
+}
+
+.white {
+    background-color: blue !important;
 }

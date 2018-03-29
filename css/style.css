@@ -1,5 +1,15 @@
-body {
-  font: 100% Helvetica, sans-serif;
-  color: #333; }
+html {
+  height: 100%; }
+
+.parallax-container {
+  height: 200px; }
+
+nav {
+  color: #fff;
+  background-color: red;
+  font-family: Calibri; }
+
+.white {
+  background-color: blue !important; }
 
 /*# sourceMappingURL=style.css.map */
