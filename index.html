@@ -1,95 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <title>Mashal's Pokedex</title>
-  <!-- MOBILE RESPONSIVE -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Mashal's Pokedex</title>
+    <!-- MOBILE RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
 
-  <!-- BACKGROUND COLOR -->
+    <!-- BACKGROUND COLOR -->
 
-  <div class="card-panel #d50000 red accent-4">
+    <div class="card-panel #d50000 red accent-4">
 
-    <!-- NAV BAR -->
+        <!-- NAV BAR -->
 
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">POKEMON</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-        </ul>
-      </div>
-    </nav>
-
-    <!-- POKEMON CARDS -->
-
-    <!-- SQUIRTLE -->
-
-    <div class="row">
-
-      <div class="col m4">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <div id="squirtlePhoto">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">POKEMON</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                </ul>
             </div>
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-            <p><a href="#">This is a link</a></p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-            <p>POKEMON INFO</p>
-          </div>
+        </nav>
+
+        <!-- POKEMON CARDS -->
+
+        <!-- SQUIRTLE -->
+
+        <div class="row">
+
+            <div class="col m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <div id="squirtleFrontPhoto">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span id="squirtleName" class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span id="squirtleInnerName" class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                        <p><div id="squirtleInfo"></div></p>
+                        <div id="squirtleBackPhoto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WARTORTLE -->
+
+            <div class="col m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <div id="wartortleFrontPhoto">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span id="wartortleName" class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span id="wartortleInnerName" class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                        <div id="wartortleInfo"></div>
+                        <div id="wartortleBackPhoto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLASTOISE -->
+
+            <div class="col m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <div id="blastoiseFrontPhoto">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span id="blastoiseName" class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span id="blastoiseInnerName" class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                        <div id="blastoiseInfo"></div>
+                        <div id="blastoiseBackPhoto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-
-      <!-- WARTORTLE -->
-
-      <div class="col m4">
-        <div class="card">
-         <div class="card-image waves-effect waves-block waves-light">
-          <div id="wartortlePhoto">
-          </div>
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-          <p>POKEMON INFO</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- BLASTOISE -->
-
-    <div class="col m4">
-      <div class="card">
-       <div class="card-image waves-effect waves-block waves-light">
-        <div id="blastoisePhoto">
-        </div>
-      </div>
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-        <p><a href="#">This is a link</a></p>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-        <p>POKEMON INFO</p>
-      </div>
-    </div>
-  </div>
-
-</div>
 
 
-      <!-- MODAL 
+        <!-- MODAL 
 
          <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
          
@@ -106,10 +110,11 @@
          
        -->
 
-       <!-- SCRIPT TAGS -->
+        <!-- SCRIPT TAGS -->
 
-       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-       <script src="main.js"></script>
-       <script type="text/javascript" src="js/materialize.min.js"></script>
-     </body>
-     </html>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="main.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+</html>
