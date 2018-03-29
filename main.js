@@ -1,8 +1,9 @@
+// Created a class of Trainer
 class Trainer {
     constructor() {
         this.pokemon = [];
     }
-
+//Gets pokemon based on its name along with stats
     getPokemon(name) {
         // console.log(this.pokemon)
         let found = this.pokemon.find(function(element) {
@@ -13,7 +14,7 @@ class Trainer {
         // console.log(found)
         return found;
     }
-
+//Returns pokemon with its abilities and stats
     allPokemon() {
         return this.pokemon
     }
@@ -23,8 +24,10 @@ class Trainer {
     }
 }
 
+// My Trainer name is Batman
 let batman = new Trainer(); // class
 
+// Class Pokemon holds information
 class Pokemon {
     constructor(name, hp, attack, defense, abilities1, abilities2, frontImage, backImage) {
         this.name = name;
@@ -56,6 +59,7 @@ $.ajax({
         frontImage = data.sprites.front_default
         backImage = data.sprites.back_default
 
+        // Take the first letter of the name to capitalize it
         let Name = name.charAt(0).toUpperCase() + name.slice(1);
 
         $("#squirtleName").append(`<p>${name}</p>`),
@@ -77,7 +81,6 @@ $.ajax({
     },
     complete: function() {
         // console.log(batman.pokemon[0].hp + attack + defense + abilities1 + abilities2)
-
     }
 });
 
@@ -86,7 +89,7 @@ batman.pokemon[0]
 
 // WARTORTLE
 
-let wartortleUrl = 'https://pokeapi.co/api/v2/pokemon/8';
+let wartortleUrl = 'http://pokeapi.salestock.net/api/v2/pokemon/8/';
 $.ajax({
     url: wartortleUrl,
     type: 'GET',
@@ -113,6 +116,7 @@ $.ajax({
             $("#wartortleBackPhoto").append(`<img src = "${backImage}">`)
 
         let wartortle = new Pokemon(name, hp, attack, defense, abilities1, abilities2)
+        
         batman.addPokemon(wartortle)
         console.log(wartortle.hp, attack, defense, abilities1, abilities2)
 
@@ -124,7 +128,7 @@ $.ajax({
 
 // BLASTOISE
 
-let blastoiseUrl = 'https://pokeapi.co/api/v2/pokemon/9';
+let blastoiseUrl = 'http://pokeapi.salestock.net/api/v2/pokemon/9/';
 $.ajax({
     url: blastoiseUrl,
     type: 'GET',
@@ -151,6 +155,7 @@ $.ajax({
 
         let blastoise = new Pokemon(name, hp, attack, defense, abilities1, abilities2)
         //console.log(blastoise)
+        
         batman.addPokemon(blastoise)
         //console.log(batman)
         //console.log(blastoise.hp, attack, defense, abilities1, abilities2)
