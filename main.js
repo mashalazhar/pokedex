@@ -40,7 +40,7 @@ class Pokemon {
 
 // SQUIRTLE
 
-let squirtleUrl = 'https://pokeapi.co/api/v2/pokemon/7/';
+let squirtleUrl = 'http://pokeapi.salestock.net/api/v2/pokemon/7/';
 $.ajax({
     url: squirtleUrl,
     type: 'GET',
@@ -154,7 +154,6 @@ $.ajax({
         batman.addPokemon(blastoise)
         //console.log(batman)
         //console.log(blastoise.hp, attack, defense, abilities1, abilities2)
-
     },
     error: function(err) {
         console.log('error:' + err)
@@ -170,8 +169,8 @@ $(document).ready(function() {
 // MODAL
 
 $(document).ready(function(){
-    $(function () {         
-        $('.modal').modal();
-        $('#modal1').modal('open');
-    });
- })(jQuery);
+    {         
+    $('.modal').modal();
+    $('#modal1').modal('open');
+    };
+ })
