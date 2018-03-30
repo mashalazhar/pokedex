@@ -43,7 +43,7 @@ class Pokemon {
 
 // SQUIRTLE
 
-let squirtleUrl = 'http://pokeapi.salestock.net/api/v2/pokemon/7/';
+let squirtleUrl = 'https://pokeapi.co/api/v2/pokemon/7/';
 $.ajax({
     url: squirtleUrl,
     type: 'GET',
@@ -89,7 +89,7 @@ batman.pokemon[0]
 
 // WARTORTLE
 
-let wartortleUrl = 'http://pokeapi.salestock.net/api/v2/pokemon/8/';
+let wartortleUrl = 'https://pokeapi.co/api/v2/pokemon/8/';
 $.ajax({
     url: wartortleUrl,
     type: 'GET',
@@ -128,7 +128,7 @@ $.ajax({
 
 // BLASTOISE
 
-let blastoiseUrl = 'http://pokeapi.salestock.net/api/v2/pokemon/9/';
+let blastoiseUrl = 'https://pokeapi.co/api/v2/pokemon/9/';
 $.ajax({
     url: blastoiseUrl,
     type: 'GET',
